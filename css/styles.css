@@ -196,6 +196,7 @@ body {
 
 #footer {
   background-color: #D46104;
+  position: relative;
 }
 
 #footer a {
@@ -319,6 +320,7 @@ body {
 
 .values-title, .mision-title, .vision-title, .pasion-title, .prod-title, .gif-title {
   font-size: 2.5rem;
+  font-weight: 500;
 }
 
 @media all and (max-width: 768px) {
@@ -345,7 +347,7 @@ body {
   }
 }
 
-.hero-name, .map-title {
+.hero-name, .map-title, .back-title {
   font-size: 1.8rem;
 }
 
@@ -359,6 +361,10 @@ body {
   .map-title {
     font-size: 1.3rem;
   }
+}
+
+.back-title {
+  margin-bottom: .5rem;
 }
 
 .values-text, .mision-text, .vision-text, .pasion-text, .hero {
@@ -396,12 +402,12 @@ body {
   }
 }
 
-.map-text, .prod-name {
+.map-text, .prod-name, .back-text {
   font-size: 1.25rem;
 }
 
 @media all and (max-width: 768px) {
-  .map-text, .prod-name {
+  .map-text, .prod-name, .back-text {
     font-size: 1rem;
   }
 }
@@ -447,20 +453,52 @@ body {
   }
 }
 
-#prod-1:hover, #prod-2:hover, #prod-3:hover {
-  animation-name: shadow-drop-center;
-  animation-timing-function: linear;
+/*ESCRIBIR BIEN EN SASS!!!!!!*/
+.prod .back:hover {
+  animation-name: slide-in-left;
+  animation-timing-function: ease-out;
   animation-fill-mode: both;
-  animation-duration: 0.4s;
+  animation-duration: 0.3s;
 }
 
-@keyframes shadow-drop-center {
+@-webkit-keyframes slide-in-left {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
   }
   100% {
-    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
   }
+}
+
+.prod {
+  position: relative;
+}
+
+.prod .back {
+  background-color: white;
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+}
+
+.prod .front {
+  position: absolute;
+}
+
+.back ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.back-text li::before {
+  content: " ";
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='18' viewBox='0 0 12 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L11 11L1 21' stroke='%23818181' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  width: 8px;
+  height: 18px;
+  display: inline-block;
+  margin-right: .2rem;
 }
