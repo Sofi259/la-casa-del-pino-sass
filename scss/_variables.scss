@@ -1,3 +1,30 @@
-$color-principal: #D46104;
-$color-secondary: #3C721A;
-$color-text: #818181;
+$colores: (
+	principal: #D46104,
+	secundary: #3C721A,
+	text: #818181,
+);
+
+$font-size: (
+	big: 2.5rem,
+	medium: 1.8rem,
+	regular: 1.6rem,
+	small: 1.25rem,
+);
+
+$font-size-mq: (
+	big: 1.5rem,
+	regular: 1rem,
+	small: 1rem,
+);
+
+$font-weight: (
+	bold: 700,
+	medium: 500,
+	regular: 400,
+	light: 300,
+);
+
+$breakpoints: (
+	md: "768px",
+	lg: "992px",
+);
