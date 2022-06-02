@@ -8,14 +8,14 @@
   	}	
   	&:hover{
 		@extend %btn-states;
-	}
-	&:active{
-		@extend %btn-states;
-	}
-	&:focus{
-		@extend %btn-states;
-		box-shadow: none;
-	}	
+		}
+		&:active{
+			@extend %btn-states;
+		}
+		&:focus{
+			@extend %btn-states;
+			box-shadow: none;
+		}	
 };
 
 %btn-states{

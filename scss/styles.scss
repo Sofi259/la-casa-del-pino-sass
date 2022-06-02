@@ -254,10 +254,6 @@ body{
 		justify-self: center;
 	}
 }
-
-
-/*!!!!!NUEVO SASS!!!!!*/
-
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-transform: translateY(-1000px);
@@ -270,7 +266,6 @@ body{
     opacity: 1;
   }
 }
-
 .prod-title{
 	font-size: map-get($font-size,big);
 	font-weight: map-get($font-weight, medium);
@@ -362,11 +357,11 @@ body{
 
 .location{
 	& .title{
+		font-size: map-get($font-size,medium);
+		font-weight: 500;
 		@include media-up(md) {
 			font-size: 1.3rem;
 		}
-		font-size: map-get($font-size,medium);
-		font-weight: 500;
 	}
 	& .text{
 		font-size: map-get($font-size,small);
